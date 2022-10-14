@@ -27,13 +27,13 @@ public class GfG {
 class Solution
 {
     public int firstElementKTime(int[] a, int n, int k) { 
-        HashMap<Integer, Integer> count_map = new HashMap<>(); 
+        HashMap<Integer, Integer> map = new HashMap<>(); 
         for (int i = 0; i < n; i++) { 
             int c = 0; 
-            if(count_map.get(a[i])!=null)
-                c = count_map.get(a[i]); 
-            count_map.put(a[i], c+1); 
-            if (count_map.get(a[i]) == k)
+            if(map.get(a[i])!=null)
+                c = map.get(a[i]); 
+            map.put(a[i], c+1); 
+            if (map.get(a[i]) == k)
                 return a[i];
         }
         return -1; 
